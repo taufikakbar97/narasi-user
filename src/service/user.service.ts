@@ -72,8 +72,6 @@ async getArticleByUserIdAndBindToUser(userId: number, user: User) {
     .get(this.ARTICLE_SERVICE_URL + '/articles/user/' + userId)
     .pipe(
       map((res) => {
-        console.log('pepek')
-          console.log(res)
           return {
             'user': user,
             'articles': res.data
