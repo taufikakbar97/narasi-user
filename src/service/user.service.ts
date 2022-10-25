@@ -13,8 +13,7 @@ ARTICLE_SERVICE_URL: string = 'http://localhost:4001';
 
 constructor(
   @InjectRepository(User) private userRepository: Repository<User>,
-  private http: HttpService,
-) {}
+  private http: HttpService) {}
 
 create(createUserDTO: CreateUserDto): Promise<User> {
     return this.userRepository.save(this.userRepository.create(createUserDTO));
